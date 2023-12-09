@@ -1,0 +1,120 @@
+/* import necessary fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+
+/* declare root variables */
+:root {
+  --primary-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Poppins', sans-serif;
+}
+
+/* CSS Reset to get a consistent starting state acrosss browsers */
+
+/* Use a more-intuitive box-sizing model.*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    -- Add accessible line-height
+    -- Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ######################################################## */
+/* css variables */
+
+/* General styling */
+/* reste select element and input:date  */
+select,
+input[type='date'] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+body {
+  background-color: #f7fdfc;
+}
+h1 {
+  font-weight: 700;
+  font-family: var(--primary-font);
+}
+
+p {
+  font: 16px/25px var(--primary-font);
+}
+
+label {
+  font: 600 14px/14px var(--secondary-font);
+  letter-spacing: 0.1px;
+}
+
+input {
+  font: 400 14px/20px var(--secondary-font);
+}
+
+select {
+  color: #737373;
+  font: 300 14px/20px var(--secondary-font);
+  letter-spacing: 0.2px;
+}
+
+input[type='submit'] {
+  background-color: #2ec4b6;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+small {
+  font: 400 14px/25px var(--secondary-font);
+}
+
+a {
+  font: 500 14px/25px var(--secondary-font);
+  text-decoration: underline;
+  color: #2ec4b6;
+}
