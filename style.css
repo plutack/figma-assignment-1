@@ -9,12 +9,13 @@
 
 /* CSS Reset to get a consistent starting state acrosss browsers */
 
-/* Use a more-intuitive box-sizing model.*/
+/* Use a more-intuitive box-sizing model. */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
 /* Remove default margin */
 * {
   margin: 0;
@@ -29,6 +30,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+
 /* Improve media defaults */
 img,
 picture,
@@ -58,27 +60,24 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* Create a root stacking context */
-#root,
-#__next {
-  isolation: isolate;
-}
-
 /* ######################################################## */
+
 /* css variables */
 
 /* General styling */
+
 /* reste select element and input:date  */
 select,
 input[type='date'] {
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  background-color: inherit;
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 body {
   background-color: #f7fdfc;
 }
+
 h1 {
   font-weight: 700;
   font-family: var(--primary-font);
@@ -95,6 +94,10 @@ label {
 
 input {
   font: 400 14px/20px var(--secondary-font);
+  height: 48px;
+
+  /* !paswoord auto suggestion in ios overlapping */
+  outline: none;
 }
 
 select {
@@ -104,9 +107,12 @@ select {
 }
 
 input[type='submit'] {
+  background: none;
+  border: none;
   background-color: #2ec4b6;
-  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px rgb(0 0 0 / 10%);
   color: #fff;
+  height: 48px;
 }
 
 small {
@@ -117,4 +123,99 @@ a {
   font: 500 14px/25px var(--secondary-font);
   text-decoration: underline;
   color: #2ec4b6;
+}
+
+.input-container {
+  display: flex;
+  gap: 20px;
+  padding-block: 12px;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+
+form {
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 4px 50px 0 rgb(4 8 19 / 10%);
+}
+
+.input-container > :nth-child(1) {
+  border: none;
+  flex: 1 1 auto;
+  width: 16px;
+  margin-block: 2px;
+  height: 20px;
+}
+
+.input-container.dropdown,
+.input-container.dob,
+.input-container.password-box {
+  padding-block: ;
+  padding-inline: 16px 8px;
+}
+
+.input-container.dropdown > :nth-last-child(1),
+.input-container.dob > :nth-last-child(1) {
+  /* margin-block: 12px; */
+  width: 24px;
+  height: 24px;
+}
+
+#password-toggle {
+  width: 16px;
+  height: 16px;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-data input {
+  padding-block: 14px;
+  padding-inline: 16px 52px;
+}
+
+.user-data > :nth-last-child(1) {
+  border-radius: 2px;
+  border: 1px solid #f0f0f0;
+}
+
+/* mobile specific styling */
+@media (width <=599px) {
+  .section-container {
+    margin-inline: 24px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 16px;
+  }
+
+  .user-data {
+    margin-block: 12px;
+  }
+
+  .submit-container {
+    margin-block: 30px;
+  }
+
+  .user-data:nth-child(1) {
+    margin-block-start: 24px;
+  }
+
+  .user-data:nth-child(7) {
+    margin-block-end: 9px;
+  }
+
+  .user-data:nth-child(8) {
+    margin-block: 9px 15px;
+  }
+
+  form > :nth-last-child(1) {
+    margin-block: 15px 30px;
+  }
 }
