@@ -299,14 +299,18 @@ form {
   form > :nth-last-child(1) {
     margin-block: 15px 30px;
   }
+
+  .registration-text {
+    margin-block-end: 64px;
+  }
 }
 
 /* tablet and mid-screen styling */
-@media (min-width: 600px) and (max-width: 1000px) {
+@media (min-width: 600px) and (max-width: 1080px) {
   .section-container {
     margin: auto;
     width: 80%;
-    height: 100dvh;
+    margin-block: 50px;
     display: flex;
     gap: 10%;
     justify-content: center;
@@ -362,7 +366,7 @@ form {
 }
 
 /* Desktop styling */
-@media (min-width: 1000px) {
+@media (min-width: 1080px) {
   .section-container {
     margin: auto;
     width: 80%;
