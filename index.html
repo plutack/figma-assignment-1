@@ -140,16 +140,16 @@
         <form action="" method="post">
           <div class="user-data">
             <label for="firstName">First Name</label>
-            <input type="text" name="firstName" id="firstName" />
+            <input type="text" name="firstName" id="firstName" required/>
           </div>
           <div class="user-data">
             <label for="lastName">Last Name</label>
-            <input type="text" name="lastName" id="lastName" />
+            <input type="text" name="lastName" id="lastName" required />
           </div>
           <div class="user-data">
             <label for="gender">Gender</label>
             <div class="input-container dropdown">
-              <select name="gender" id="gender">
+              <select name="gender" id="gender" required>
                 <option value="" disabled selected>Select here</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -177,6 +177,7 @@
                 name="DoB"
                 id="DoB"
                 placeholder="Select here"
+                required
               />
               <svg
                 id="calendar-button"
@@ -200,6 +201,7 @@
               name="weight"
               id="weight"
               placeholder="Enter weight"
+              required
             />
           </div>
           <div class="user-data">
@@ -209,6 +211,7 @@
               name="height"
               id="height"
               placeholder="Enter height"
+              required
             />
           </div>
           <div class="user-data">
@@ -237,7 +240,7 @@
           <div class="user-data">
             <label for="password">Password</label>
             <div class="input-container password-box">
-              <input type="password" name="password" id="password" />
+              <input type="password" name="password" id="password" required/>
               <svg
                 id="password-toggle"
                 xmlns="http://www.w3.org/2000/svg"
