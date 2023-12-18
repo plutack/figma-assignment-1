@@ -369,7 +369,7 @@ form {
 } */
 
 /* DBig screen speceific styling */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .section-container {
     margin: auto;
     width: 80%;
