@@ -1,5 +1,3 @@
-/* stylelint-disable media-feature-range-notation */
-
 /* import necessary fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
 
@@ -24,10 +22,10 @@
 }
 
 /*
-    Typographic tweaks!
-    -- Add accessible line-height
-    -- Improve text rendering
-  */
+      Typographic tweaks!
+      -- Add accessible line-height
+      -- Improve text rendering
+    */
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -62,20 +60,15 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* ######################################################## */
-
-/* css variables */
-
-/* General styling */
-
-/* reste select element and input:date  */
+/* reset select element and input:date  */
 select,
 input[type='date'] {
   appearance: none;
   background-color: inherit;
 }
 
-/* stylelint-disable-next-line no-duplicate-selectors */
+/* General styling */
+
 body {
   background-color: #f7fdfc;
 }
@@ -125,6 +118,12 @@ select {
   border-radius: 2px;
 }
 
+input,
+select,
+option {
+  cursor: pointer;
+}
+
 .user-data input {
   padding-block: 14px;
   padding-inline: 16px 52px;
@@ -140,6 +139,7 @@ input[type='date']::-webkit-datetime-edit {
   color: #011c34;
 }
 
+
 select:focus,
 input:focus {
   outline: none;
@@ -150,6 +150,10 @@ input:focus {
 input:hover,
 select:hover {
   border: 1px solid #2ec4b6;
+}
+
+option:hover {
+  background-color: #2ec4b6;
 }
 
 .input-container > svg {
@@ -228,8 +232,7 @@ form {
 
 /* small screen specific styling */
 
-/* !fix to coform with prefix notation */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   #logo {
     margin-block: 30px 20px;
   }
@@ -305,74 +308,11 @@ form {
   }
 }
 
-/* mid-screen specific styling */
-
-/* .user-data as grid component(2 columns) start shrinking to uncomfotable level at this breakpoint  range */
-
-/* @media (min-width: 768px) and (max-width: 1024px) {
+/* Big screen specific styling */
+@media (width >= 768px) {
   .section-container {
     margin: auto;
-    width: 80%;
-    margin-block: 50px;
-    display: flex;
-    gap: 10%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #logo {
-    transform: scale(2);
-    margin-block: 25px;
-  }
-
-  .primary-section {
-    transform: translateY(-50%);
-  }
-
-  h1 {
-    font: 40px / normal var(--primary-font);
-  }
-
-  p {
-    font: 16px/25px var(--primary-font);
-  }
-
-  label {
-    font: 600 14px / normal var(--primary-font);
-  }
-
-  input::placeholder {
-    font: 300 14px/20px var(--secondary-font);
-  }
-
-  input,
-  select {
-    font: 400 14px/20px var(--secondary-font);
-  }
-
-  .secondary-section {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    box-shadow: 0 4px 50px 0 rgb(4 8 19 / 10%);
-    padding: 40px;
-  }
-
-  form {
-    background-color: initial;
-    box-shadow: initial;
-    display: grid;
-    grid-template-columns: repeat(1, minmax(100px, 1fr));
-    grid-template-rows: repeat(9, 1fr);
-    gap: 25px;
-  }
-} */
-
-/* DBig screen speceific styling */
-@media (min-width: 768px) {
-  .section-container {
-    margin: auto;
-    width: 80%;
+    max-width: 80%;
     height: 100dvh;
     display: flex;
     gap: 10%;
