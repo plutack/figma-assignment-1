@@ -309,10 +309,6 @@ form {
 
 /* mid-screen specific styling */
 
-/* .user-data as grid component(2 columns) start shrinking to uncomfotable level at this breakpoint  range */
-
-
-
 @media (min-width: 640px) and (max-width: 992px){
   .section-container {
     margin-inline: 24px;
