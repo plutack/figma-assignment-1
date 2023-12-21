@@ -440,7 +440,7 @@ form {
     max-width: 80%;
     height: 100dvh;
     display: flex;
-    gap: 10%;
+    gap: 120px;
     justify-content: center;
     align-items: center;
   }
