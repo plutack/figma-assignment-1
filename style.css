@@ -231,7 +231,14 @@ form {
 
 /* small screen specific styling */
 
+
+
+
 @media (width <= 640px) {
+  .big-layout{
+    display: none;
+  }
+
   #logo {
     margin-block: 30px 20px;
   }
@@ -310,6 +317,11 @@ form {
 /* mid-screen specific styling */
 
 @media (min-width: 640px) and (max-width: 992px){
+
+  .small-layout{
+    display: none;
+  }
+
   .section-container {
     margin-inline: 24px;
   }
@@ -375,6 +387,10 @@ form {
 
 
 @media (min-width: 992px) and (max-width: 1280px) {
+  .small-layout{
+    display: none;
+  }
+
   .section-container {
     margin: auto;
     width: 80%;
@@ -434,7 +450,12 @@ form {
 }
 
 /* Big screen specific styling */
+
 @media (min-width: 1280px) {
+  .small-layout{
+    display: none;
+  }
+
   .section-container {
     margin: auto;
     max-width: 80%;
