@@ -79,7 +79,7 @@ h1 {
 }
 
 p {
-  font-weight: 400;
+  font-weight: 300;
   color: #737373;
 }
 
@@ -102,7 +102,6 @@ label {
   padding-inline: 16px 52px;
   flex: 1 1 auto;
   width: 100%;
-  height: 100%;
 }
 
 input::placeholder {
@@ -132,7 +131,6 @@ option {
 select {
   flex: 1 1 auto;
   letter-spacing: 0.2px;
-  height: 100%;
 }
 
 input[type='date']::-webkit-datetime-edit {
@@ -190,7 +188,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
 
-s {
+select {
   font: 400 14px/25px var(--secondary-font);
 }
 
@@ -208,7 +206,6 @@ form {
 
 .input-container.dropdown > :nth-last-child(1),
 .input-container.dob > :nth-last-child(1) {
-  /* margin-block: 12px; */
   width: 24px;
   height: 24px;
 }
@@ -226,21 +223,18 @@ form {
 
 .registration-text {
   text-align: center;
-  margin-inline: 6px;
+  padding-inline: 6px 5px;
 }
 
 /* small screen specific styling */
 
-
-
-
-@media (width <= 640px) {
-  .big-layout{
+@media (max-width: 640px) {
+  .large-layout {
     display: none;
   }
 
   #logo {
-    margin-block: 30px 20px;
+    margin-block-end: 20px;
   }
 
   .heading {
@@ -272,7 +266,8 @@ form {
   }
 
   .section-container {
-    margin-inline: 24px;
+    padding-inline: 24px;
+    padding-block: 30px 64px;
   }
 
   .secondary-section {
@@ -308,24 +303,19 @@ form {
   form > :nth-last-child(1) {
     margin-block: 15px 30px;
   }
-
-  .registration-text {
-    margin-block-end: 64px;
-  }
 }
 
 /* mid-screen specific styling */
 
-@media (min-width: 640px) and (max-width: 992px){
-
-  .small-layout{
+@media (min-width: 640px) and (max-width: 992px) {
+  .small-layout {
     display: none;
   }
 
   .section-container {
     margin-inline: 24px;
   }
-  
+
   #logo {
     width: 77.33px;
     height: 80px;
@@ -385,9 +375,8 @@ form {
   }
 }
 
-
 @media (min-width: 992px) and (max-width: 1280px) {
-  .small-layout{
+  .small-layout {
     display: none;
   }
 
@@ -452,13 +441,13 @@ form {
 /* Big screen specific styling */
 
 @media (min-width: 1280px) {
-  .small-layout{
+  .small-layout {
     display: none;
   }
 
   .section-container {
-    margin: auto;
-    max-width: 80%;
+    padding-block: 81px 80px;
+    padding-inline: 140px;
     height: 100dvh;
     display: flex;
     gap: 120px;
@@ -482,10 +471,12 @@ form {
 
   p {
     font: 16px/25px var(--primary-font);
+    font-weight: 400;
   }
 
   label {
     font: 600 14px / normal var(--primary-font);
+    height: 14px;
   }
 
   input::placeholder {
@@ -503,19 +494,34 @@ form {
     background: #fff;
     box-shadow: 0 4px 50px 0 rgb(4 8 19 / 10%);
     padding: 40px;
+    gap: 16px;
+    width: 100%;
+  }
+  .user-data{
+    width: 100%;
   }
 
   form {
     background-color: initial;
     box-shadow: initial;
     display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-    grid-template-rows: repeat(auto-fit, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(2, minmax(70px, 1fr));
+    gap: 24px;
+    row-gap: 30px;
+    border-radius: 6px;
+    width: 100%;
   }
 
-  .user-data:nth-child(n + 7),
-  input[type='submit'] {
+  form > :nth-child(n + 7) {
     grid-column: span 2;
+  }
+
+  .registration-text {
+    text-align: center;
+    padding-inline: 18px 19px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; 
   }
 }
