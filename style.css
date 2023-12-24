@@ -433,7 +433,6 @@ form {
     box-shadow: initial;
     display: grid;
     grid-template-columns: repeat(1, minmax(100px, 1fr));
-    grid-template-rows: repeat(9, 1fr);
     gap: 25px;
   }
 }
@@ -505,7 +504,7 @@ form {
     background-color: initial;
     box-shadow: initial;
     display: grid;
-    grid-template-columns: repeat(2, 238px);
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
     gap: 24px;
     row-gap: 30px;
     border-radius: 6px;
